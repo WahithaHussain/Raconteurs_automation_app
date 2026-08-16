@@ -10,7 +10,7 @@ import streamlit as st
 
 # --- STREAMLIT PAGE CONFIG ---
 st.set_page_config(
-    page_title="Toastmasters Agenda & Intros", page_icon="🎤", layout="centered"
+    page_title="BOSCH Raconteurs Toastmasters Agenda & Intros", page_icon="🎤", layout="centered"
 )
 
 st.title("🎤 Toastmasters Document Generator")
@@ -231,7 +231,7 @@ def match_intro(name, db_df):
 st.subheader("1. Upload Inputs")
 # --- INSTRUCTIONS EXPANDER ---
 with st.expander(
-    "📖 How to format the Role Players .txt file? (Click to view template)"
+    "📖 How to format the Role Players .txt file? (Click to view instructions)"
 ):
   st.markdown("""
     **Quick Rules:**
