@@ -229,6 +229,19 @@ def match_intro(name, db_df):
 
 # --- USER INTERFACE & MAIN LOGIC ---
 st.subheader("1. Upload Inputs")
+# --- INSTRUCTIONS EXPANDER ---
+with st.expander(
+    "📖 How to format the Role Players .txt file? (Click to view template)"
+):
+  st.markdown("""
+    **Quick Rules:**
+    * **File Type:** Plain text file (`.txt`) created in Notepad, TextEdit, or VS Code.
+    * **Copy the Teams channel message of role takers updated by VPE into the .txt file.
+    * **Key-Value Format:** Every line must follow the pattern `KEY : Value`.
+    * **Date Format:** Use `DD.MM.YYYY` (e.g., `24.07.2026`).
+    * **Optional Roles:** If there is no Speaker 2 or Listener, leave the line blank or omit it entirely.
+    * **Optional Roles:** If there is no role player confirmed, fill as XXX which could be edited later.
+    """)
 txt_file = st.file_uploader(
     "Upload Role Players Plan (.txt)", type=["txt"], help="Mandatory file"
 )
